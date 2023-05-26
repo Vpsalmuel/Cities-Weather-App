@@ -75,6 +75,11 @@ button {
     outline: none;
 }
 
+#error {
+    color: white;
+    font-size: 24px;
+}
+
 .content-result {
     color: white;
     text-align: center;
