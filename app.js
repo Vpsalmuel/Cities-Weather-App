@@ -3,6 +3,9 @@ const searchEl = document.querySelector(".search");
 const tempEl = document.querySelector(".unit");
 const cityEl = document.getElementById("city");
 const searchBtn = document.querySelector("button");
+const countryEl = document.querySelector(".country");
+const weatherEl = document.querySelector(".main");
+const descriptionEl = document.querySelector(".description");
 const result = document.querySelector(".content-result");
 const apiKey = "b22024532f8e9db74e95950cb4419da9";
 
@@ -18,9 +21,16 @@ function getCity(value) {
       if (data.cod !== "404") {
         let temp = data.main.temp;
         let city = data.name;
+        let country = data.sys.country;
+        let description = data.weather[0].description;
+        let main = data.weather[0].main;
 
         tempEl.textContent = temp.toFixed(0) + "°C";
         cityEl.textContent = city;
+        countryEl.textContent = country;
+        descriptionEl.textContent = description;
+        weatherEl.textContent = main;
+
         document.getElementById("error").innerText = "";
         result.style.display = "block";
       } else {

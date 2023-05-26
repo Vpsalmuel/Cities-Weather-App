@@ -17,12 +17,30 @@
           <p>Enter a city name and click the button to search for it.</p>
         </div>
         <div class="content-input">
-          <input type="text" name="city" class="search" />
+          <input
+            type="text"
+            name="city"
+            class="search"
+            placeholder="enter city name here" />
           <button type="btn">Submit</button>
         </div>
         <div class="content-result">
           <p>The Temperature of <span id="city"></span> is</p>
           <h1 class="city-result"><span class="unit">°C</span></h1>
+          <div class="conditions">
+            <h4>
+              Country:
+              <span class="country">&nbsp; &nbsp;</span>
+            </h4>
+            <h4>
+              Weather type:
+              <span class="main">&nbsp; &nbsp;</span>
+            </h4>
+            <h4>
+              Weather desc:
+              <span class="description">&nbsp; &nbsp;</span>
+            </h4>
+          </div>
         </div>
         <div id="error"></div>
       </div>
